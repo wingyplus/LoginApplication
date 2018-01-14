@@ -9,9 +9,17 @@ namespace LoginWebPage.Controllers
     public class LoginController : Controller
     {
         // GET: /Login
+        [HttpGet]
         public ActionResult Index()
         {
             return View();
+        }
+
+        // POST: /Login
+        [HttpPost]
+        public ActionResult Login()
+        {
+            throw new NotImplementedException();
         }
     }
 }
