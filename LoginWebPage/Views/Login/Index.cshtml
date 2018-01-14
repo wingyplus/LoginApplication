@@ -1,12 +1,24 @@
-﻿
+﻿@model LoginWebPage.Controllers.AuthenticationError
+@using System.Activities.Statements
+
 @{
     ViewBag.Title = "Login Page";
 }
 
 <h2>@ViewBag.Title</h2>
 
-@using (Html.BeginForm("Login", "Login", FormMethod.Post))
-{
-    @Html.TextBoxFor(model => model.Username)
-}
-
+<form method="POST" action="/Login/DoLogin">
+    <div>
+        <label for="username">Username</label>
+        <input type="text" name="username"/>
+    </div>
+    
+    <div>
+        <label for="password">Password</label>
+        <input type="password" name="password"/>
+    </div>
+   
+    <div>
+        <button type="submit">Log In</button>
+    </div>
+</form>
